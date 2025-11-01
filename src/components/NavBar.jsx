@@ -30,6 +30,7 @@ function NavBarDesktop(){
 
 function NavBarList({setIsOpen}){
   return (
+    <div className='w-screen'>
     <ul className='bg-gray-900 w-[100vw] h-screen absolute top-0 right-0 flex flex-col text-3xl gap-8 items-center justify-center text-white'>
       <NavBarItem Icon={FaHome} name='Home'/>
       <NavBarItem Icon={IoPersonOutline } name='About' />
@@ -37,12 +38,13 @@ function NavBarList({setIsOpen}){
       <NavBarItem Icon={TbFileCv } name='Resume' />
       <p className='font-bold absolute top-0 right-0 p-4 text-center cursor-pointer text-white' onClick={()=> setIsOpen(false)}>X</p>
     </ul>
+    </div>
   )
 }
 
 function NavBarItem({Icon,name,className}) {
   return (
-    <li className="flex items-center justify-center gap-1">
+    <li className="flex items-center justify-center gap-2">
       <Icon/>
       <p>{name}</p>
     </li>
